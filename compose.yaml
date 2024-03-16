@@ -1,0 +1,21 @@
+version: '2.1'
+
+services:
+  
+  frontend:
+    depends_on:
+      - backend
+    image: frontendgo
+    ports:
+      - 5001:5000
+
+  backend:
+    image: backendgo
+    ports:
+      - 8080:8080
+
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    hostname: redisgo
