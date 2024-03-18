@@ -11,10 +11,6 @@ COPY . .
 
 RUN go build -o server
 
-ENV REQUEST_ORIGIN=http://localhost:5001
-
 ENV PORT=8080
-
-ENV REDIS_HOST=redisgo
 
 CMD [ "./server" ]
